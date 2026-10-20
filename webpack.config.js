@@ -1,5 +1,6 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const webpack = require('webpack');
 
 module.exports = {
     mode: 'development',
@@ -16,6 +17,9 @@ module.exports = {
         new HtmlWebpackPlugin({
             template: './src/index.html',
         }),
+        new webpack.ProvidePlugin({
+            PIXI: 'pixi.js',
+        })
     ],
     devServer: {
         static: './dist',

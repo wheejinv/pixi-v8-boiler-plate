@@ -6,6 +6,7 @@
 		"start": "webpack serve --mode development",
 		"build:dev": "webpack --mode development",
 		"build": "webpack --mode production",
+		"test": "node --test test/*.test.mjs",
 		"prepare": "husky"
 	},
 	"lint-staged": {
